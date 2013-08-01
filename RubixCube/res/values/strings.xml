@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rubik`s Cube</string>
+    <string name="mix">Mix</string>
+    <string name="cube2">2х2х2 Rubix</string>
+    <string name="cube3">3х3х3 Rubix</string>
+    <string name="cube4">4х4х4 Rubix</string>
+    <string name="exit">Exit</string>
+    <string name="cube5">5х5х5 Rubix</string>
+</resources>

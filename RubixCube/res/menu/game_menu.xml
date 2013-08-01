@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/mix" android:title="@string/mix"></item>
+    <item android:id="@+id/new2" android:title="@string/cube2"></item>
+    <item android:id="@+id/new3" android:title="@string/cube3"></item>
+    <item android:id="@+id/new4" android:title="@string/cube4"></item>
+    <item android:id="@+id/new5" android:title="@string/cube5"></item><item android:id="@+id/exit" android:title="@string/exit"></item>
+    
+    
+
+</menu>
