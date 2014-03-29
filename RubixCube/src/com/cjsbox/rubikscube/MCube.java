@@ -159,28 +159,28 @@ public class MCube {
 	{
 		parts = new Vector<Part>();
 		Rectangle rectWhite =
-				new Rectangle(quad, textures.getTextureIdforResource(R.drawable.whiteside));
+				new Rectangle(quad, textures.getTextureIdforResource(GLRenderer.WHITE));
 		int id = 1;
 		for (int i = 0; i < size * size; i ++)
 			parts.add(new Part(MyOpenGL.white, id++, rectWhite));
 		Rectangle rectBlue =
-				new Rectangle(quad, textures.getTextureIdforResource(R.drawable.blueside));
+				new Rectangle(quad, textures.getTextureIdforResource(GLRenderer.BLUE));
 		for (int i = 0; i < size * size; i ++)
 			parts.add(new Part(MyOpenGL.red, id++, rectBlue));
 		Rectangle rectYellow =
-				new Rectangle(quad, textures.getTextureIdforResource(R.drawable.yellowside));
+				new Rectangle(quad, textures.getTextureIdforResource(GLRenderer.YELLOW));
 		for (int i = 0; i < size * size; i ++)
 			parts.add(new Part(MyOpenGL.yellow, id++, rectYellow));
 		Rectangle rectGreen =
-				new Rectangle(quad, textures.getTextureIdforResource(R.drawable.greenside));
+				new Rectangle(quad, textures.getTextureIdforResource(GLRenderer.GREEN));
 		for (int i = 0; i < size * size; i ++)
 			parts.add(new Part(MyOpenGL.orange, id++, rectGreen));
 		Rectangle rectRed =
-				new Rectangle(quad, textures.getTextureIdforResource(R.drawable.redside));
+				new Rectangle(quad, textures.getTextureIdforResource(GLRenderer.RED));
 		for (int i = 0; i < size * size; i ++)
 			parts.add(new Part(MyOpenGL.green, id++, rectRed));
 		Rectangle rectOrange =
-				new Rectangle(quad, textures.getTextureIdforResource(R.drawable.orangeside));
+				new Rectangle(quad, textures.getTextureIdforResource(GLRenderer.ORANGE));
 		for (int i = 0; i < size * size; i ++)
 			parts.add(new Part(MyOpenGL.blue, id++, rectOrange));
 	}
@@ -661,7 +661,7 @@ public class MCube {
 		this.textures = textures;
 		sizeOfCube = size;
 		status = 'N';
-		speed = 5.0f;
+		speed = 10.0f;
 		mode = GL10.GL_MODELVIEW;
 
 		//int current = 0; // current number of quadrat

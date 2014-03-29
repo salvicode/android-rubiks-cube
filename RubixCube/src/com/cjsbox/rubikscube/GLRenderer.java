@@ -36,7 +36,13 @@ public class GLRenderer implements GLSurfaceView.Renderer
     private GLTextures textures;
     private Context context;
 	//-----------------------------------------------------
-
+    
+    public static final String BLUE = "blueside.png";
+    public static final String GREEN = "greenside.png";
+    public static final String ORANGE = "orangeside.png";
+    public static final String RED = "redside.png";
+    public static final String WHITE = "whiteside.png";
+    public static final String YELLOW = "yellowside.png";
 	// constructor
 	public GLRenderer(float width, float height, Context context)
 	{
@@ -84,7 +90,7 @@ public class GLRenderer implements GLSurfaceView.Renderer
 		float matAmbient[] = {1.0f,1.0f, 1.0f, 1.0f};
 		float matDiffuse[] = {1.0f, 1.0f, 1.0f, 1.0f};
 		float lightPost[] = {0.0f, 5.0f, 10.0f, 1.0f};
-	      gl.glClearColor(0.2f, 0.2f, 0.2f, 1.0f);  // Set color's clear-value to black
+	      gl.glClearColor(0.8f, 0.8f, 0.8f, 1.0f);  // Set color's clear-value to black
 	      gl.glClearDepthf(1.0f);            // Set depth's clear-value to farthest
 	      gl.glEnable(GL10.GL_DEPTH_TEST);   // Enables depth-buffer for hidden surface removal
 	      gl.glDepthFunc(GL10.GL_LEQUAL);    // The type of depth testing to do
@@ -102,14 +108,14 @@ public class GLRenderer implements GLSurfaceView.Renderer
 	    gl.glLightfv(GL10.GL_LIGHT0, GL10.GL_AMBIENT, lightAmbient, 0);
 	  //  gl.glLightfv(GL10.GL_LIGHT0, GL10.GL_DIFFUSE, lightDiffuse, 0);
 	    textures = new GLTextures(gl, context);
-	    textures.add(R.drawable.whiteside);
-	    textures.add(R.drawable.yellowside);
-	    textures.add(R.drawable.blueside);
-	    textures.add(R.drawable.greenside);
-	    textures.add(R.drawable.redside);
-	    textures.add(R.drawable.orangeside);
+	    textures.add(WHITE);
+	    textures.add(YELLOW);
+	    textures.add(BLUE);
+	    textures.add(GREEN);
+	    textures.add(RED);
+	    textures.add(ORANGE);
 	    textures.loadTextures();
-	      createCube(3);
+	      createCube(MainMenuActivity.size);
 	      cube.startRandomRotating(30);
 	}
 

@@ -1,24 +1,26 @@
 package com.cjsbox.rubikscube;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.actionbarsherlock.app.SherlockActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
 
-
-public class MultyCubeGLActivity extends SherlockActivity {
+public class MultyCubeGLActivity extends FragmentActivity {
 	private static final String LOG_TAG = MultyCubeGLActivity.class.getSimpleName();
+	public static final String SIZE = "size";
 	private GLView glview;
 	private ImageView backBtn;
+	int size;
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
+        size = getIntent().getExtras().getInt(SIZE);
         glview = (GLView)findViewById(R.id.glview);
         backBtn = (ImageView)findViewById(R.id.back_btn);
         backBtn.setOnClickListener(new View.OnClickListener() {
@@ -32,7 +34,7 @@ public class MultyCubeGLActivity extends SherlockActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-	    MenuInflater inflater = getSupportMenuInflater();
+	    MenuInflater inflater = getMenuInflater();
 	    inflater.inflate(R.menu.game_menu, menu);
 	    return true;
 	}
